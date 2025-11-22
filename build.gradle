@@ -10,9 +10,23 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.10.0',
+            'com.codeborne:selenide:7.11.0',
+            'org.slf4j:slf4j-simple:2.0.7',
+            'com.codeborne:pdf-test:1.9.2',
+            'com.codeborne:xls-test:1.7.2',
+            'commons-io:commons-io:2.20.0',
+            'com.opencsv:opencsv:5.7.1',
+            'com.fasterxml.jackson.core:jackson-databind:2.20.0')
+
+    testImplementation('com.codeborne:pdf-test:1.9.2') {
+        exclude group: 'org.apache.poi'
+    }
+    testImplementation('com.codeborne:xls-test:1.7.2') {
+        exclude group: 'org.apache.poi'
+    }
+
+    testImplementation 'org.apache.poi:poi:5.2.3'
 }
 
 test {

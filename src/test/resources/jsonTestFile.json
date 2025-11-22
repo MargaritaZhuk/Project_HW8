@@ -1,0 +1,14 @@
+{
+  "mission": "Exploration of Mars",
+  "launchYear": 2028,
+  "spacecraft": {
+    "name": "Mars Explorer 1",
+    "crew": ["Astronaut", "Engineer", "Pilot"]
+  },
+  "goals": [
+    "Search for signs of past life",
+    "Study climate and geology",
+    "Test new technologies for future missions"
+  ],
+  "sponsors": ["NASA", "ESA", "Roscosmos"]
+}
